@@ -1,0 +1,137 @@
+body{
+          margin: 0;
+          padding: 0;
+          background-color: #c1c9d0;
+}
+.grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-template-rows: 0.6fr 1.5fr 1.3fr 1.2fr 0.8fr 0.8fr 0.5fr;
+          gap: 0px 0px;
+          grid-template-areas:
+            "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
+            ". . about-me about-me about-me ."
+            ". skills skills skills . ."
+            ". . more-about-me more-about-me more-about-me ."
+            ". . work-together work-together . ."
+            ". . free-to-contact free-to-contact . ."
+            "footer footer footer footer footer footer";
+}
+        .nav-bar { grid-area: nav-bar; }
+        ul{
+          display: flex;
+          justify-content: flex-end;
+          margin: 2vh 18vw;
+          list-style-type: none;
+          padding-top: 8vh;}
+          a{
+          text-decoration: none;
+          padding: 0 2vw;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 18px;
+          font-weight: 600;
+          color: black;}
+        
+        .about-me { grid-area: about-me; 
+          height: 70vh;     
+          display: flex;
+          flex-direction: column;
+          justify-content: center;}
+        
+        .skills { grid-area: skills;    
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+        
+        .more-about-me { grid-area: more-about-me;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+        
+        .work-together { grid-area: work-together; align-self: center; text-align: center; }
+        .work-together p{
+          font-family: 'Crimson Text', serif;
+          font-size: 52px;
+          line-height: 70%;}   
+
+          .free-to-contact { grid-area: free-to-contact; align-self: center; text-align: center;}
+          .free-to-contact p{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 500;
+            color: #616364;}
+          .footer { grid-area: footer; 
+            display: flex;
+            align-items: center;
+            margin: 0 5vw;
+            border-top: 1px solid #939697;}
+          .footer h6{
+            font-family: 'Crimson Text', serif;
+            font-size: 36px;
+            margin: 4vh 2vw;
+            line-height: 110%;}
+          .footer #contact{
+            display: flex;
+            margin-left: auto;}
+        
+
+/* Reveal on scroll */
+
+.reveal{
+  position: relative;
+  transform: translateY(97px);
+  opacity: 0;
+  transition: all 2s ease-out;
+}
+.reveal.active{
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.revealXleft{
+  position: relative;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+.revealXleft.active{
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.revealXright{
+  position: relative;
+  transform: translateX(120px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+.revealXright.active{
+  transform: translateX(0px);
+  opacity: 1;
+}
+/* reveal who am i */
+@keyframes revealRightAbout {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.about-me{
+  animation: 3.8s ease-out 0s 1 revealRightAbout;
+}
+/* nav-bar-reveal */
+@keyframes slideNavTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.nav-bar{
+  animation: 1.8s ease-out 0s 1 slideNavTop;
+}
