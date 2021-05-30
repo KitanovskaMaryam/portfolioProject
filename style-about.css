@@ -1,12 +1,31 @@
+:root{
+  --color-heading: #0d004d;
+  --color-paragraph:#1c1930;
+  --color-accent: #ccc;
+  --font-heading:'Poppins', sans-serif;
+  --font-paragraph:'Raleway', sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
 body{
           margin: 0;
           padding: 0;
-          background-color: #c1c9d0;
+}
+#background-gradient{
+  background-image: url(images/06.-Wisteria_1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -20;
 }
 .grid-container {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-          grid-template-rows: 0.6fr 1.5fr 1.3fr 1.2fr 0.8fr 0.8fr 0.5fr;
+          grid-template-rows: 0.4fr 1fr 0.8fr 1fr 0.8fr 0.8fr 0.1fr;
           gap: 0px 0px;
           grid-template-areas:
             "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -23,58 +42,122 @@ body{
           justify-content: flex-end;
           margin: 2vh 18vw;
           list-style-type: none;
-          padding-top: 8vh;}
+          padding-top: 8vh;
+        }
           a{
-          text-decoration: none;
-          padding: 0 2vw;
-          font-family: 'Montserrat', sans-serif;
-          font-size: 18px;
-          font-weight: 600;
-          color: black;}
-        
+            text-decoration: none;
+            padding: 0 2vw;
+            font-family: var(--font-heading);
+            font-size: 1.3vw;
+            font-weight: 700;
+            color: var(--color-paragraph);
+            text-rendering: geometricPrecision;
+            -webkit-font-smoothing: antialiased;
+        }
+        .about-me p a {
+          color: var(--color-heading);
+        }
         .about-me { grid-area: about-me; 
           height: 70vh;     
           display: flex;
           flex-direction: column;
           justify-content: center;}
-        
+        .about-me h1,
+        .skills h2,
+        .more-about-me h2{
+          font-family: var(--font-heading);
+          color: var(--color-heading);
+          text-rendering: geometricPrecision;
+          -webkit-font-smoothing: antialiased;
+          font-size: 3vw;
+          font-weight: 700;
+        }
+        .about-me p,
+        .more-about-me p{
+          font-family: var(--font-paragraph);
+          color: var(--font-paragraph);
+          font-size: 1.1vw;
+          line-height: 130%;
+          font-weight: 400;
+          width: 82%;
+        }
         .skills { grid-area: skills;    
           display: flex;
           flex-direction: column;
           justify-content: center; }
-        
+        .skills p{
+          font-family: var(--font-heading);
+          color: var(--color-heading);
+          font-size: 1.5vw;
+          font-weight: 700;
+        }
         .more-about-me { grid-area: more-about-me;
           display: flex;
           flex-direction: column;
           justify-content: center; }
         
-        .work-together { grid-area: work-together; align-self: center; text-align: center; }
-        .work-together p{
-          font-family: 'Crimson Text', serif;
-          font-size: 52px;
-          line-height: 70%;}   
-
+          .work-together { grid-area: work-together; align-self: center; text-align: center; display: flex; flex-direction: row; justify-content: flex-start}
+          .work-together p{
+            font-family:var(--font-heading);
+            color: var(--color-heading);
+            font-size: 4vw;
+            font-weight: 800;
+            line-height: 90%;
+          }       
+          .work-together .star{
+            width: 6vw;
+            height: auto; 
+  }
+  
+  
+          
+          .work-together .star img{
+            width: 100%;
+            height: auto;
+            animation-name: spin;
+            animation-duration: 9000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+            transform: rotate(3deg); 
+            transform: rotate(0.3rad);
+            transform: rotate(3grad);  
+            transform: rotate(.03turn); 
+          }
+          @keyframes spin {
+            from {
+                transform:rotate(0deg);
+            }
+            to {
+                transform:rotate(360deg);
+            }
+        }
+  
           .free-to-contact { grid-area: free-to-contact; align-self: center; text-align: center;}
           .free-to-contact p{
-            font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
-            font-weight: 500;
-            color: #616364;}
+            font-family: var(--font-heading);
+            font-size: 2vw;
+            font-weight: 200;
+            color: var(--color-paragraph);
+          }
           .footer { grid-area: footer; 
             display: flex;
             align-items: center;
             margin: 0 5vw;
-            border-top: 1px solid #939697;}
+            border-top: 1px solid var(--color-paragraph);
+  
+          }
           .footer h6{
-            font-family: 'Crimson Text', serif;
-            font-size: 36px;
+            font-family:var(--font-heading);
+            color: var(--color-heading);
+            font-size:2vw;
             margin: 4vh 2vw;
-            line-height: 110%;}
+            line-height: 110%; 
+          }
           .footer #contact{
             display: flex;
-            margin-left: auto;}
-        
-
+            margin-left: auto;
+          }
+  
 /* Reveal on scroll */
 
 .reveal{
