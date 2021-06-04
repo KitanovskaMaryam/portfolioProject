@@ -14,10 +14,7 @@
           <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
-  <div id="background-gradient"></div>
-          
-          <div class="grid-container">
-
+  <div class="grid-container">
             <div class="nav-bar">
                       <ul>
                         <li><a href="index.html">home</a></li>
@@ -44,9 +41,10 @@
                               <p>some of my work</p>
                     </div>
                     <div class="project-intro-text reveal">
-                      <h3>scroll to see</h3>
+                      <h3>swipe to see</h3>
                     </div>
-                    <div class="project revealXright">
+                    <!-- Otstraneto revealXright klasa, od nego dava overflow x -->
+                    <div class="project">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
@@ -150,5 +148,17 @@
           <script type="text/javascript" src="text-animation.js"></script>
           <!-- Reveal on scroll every div -->
           <script type="text/javascript" src="reveal-on-scroll.js"></script>
+<script>
+  var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
+</script>
 </body>
 </html>
