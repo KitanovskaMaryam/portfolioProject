@@ -227,6 +227,7 @@ body{
         position: relative;
         background: inherit;
         overflow: hidden;
+        width: 38vw;
         z-index: 1;
         /* /glass effect */
         margin: 5% 0;
@@ -255,7 +256,7 @@ body{
           text-align: left;
           font-family: var(--font-paragraph);
           color: var(--color-paragraph);
-          margin-right: 5vw;
+          margin-right: 3vw;
         }
         .textbox-slider{
           padding: 5%;
@@ -305,7 +306,7 @@ body{
             font-family: var(--font-heading);
             color: var(--color-paragraph);
             font-size: 3vw;
-            font-weight: 100;
+            font-weight: 300;
           }
 
 /* Reveal on scroll */
@@ -386,14 +387,14 @@ body{
     margin-right: 8vw!important;
   }
   .slider-card{
-    width: 43vw;
+    width: 37vw;
   }
   .swiper-slide .text-slider{
-    margin-right: 2vw;
-    font-size: 1.6vw;
+    font-size: 1.8vw;
+    margin-right: 3vw;
   }
   .swiper-slide a{
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     font-weight: 500;
   }
   .footer{
@@ -409,7 +410,7 @@ body{
   .grid-container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
-    grid-template-rows: 0.1fr 1fr 1.3fr 0.1fr 0.5fr 1.2fr 0.7fr 0.6fr 0.3fr;
+    grid-template-rows: 0.1fr 1fr 1.3fr 0.1fr 0.5fr 1fr 0.7fr 0.6fr 0.3fr;
     gap: 0px 0px;
     grid-template-areas:
       "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -451,6 +452,20 @@ body{
   .view-projects-ph p{
     font-size: 3vw;
   }
+  .swiper-slide{
+    margin-right: 0vw!important;
+  }
+  .slider-card{
+    width: 40vw;
+  }
+  .swiper-slide .text-slider{
+    font-size: 2vw;
+    margin-right: 0vw;
+  }
+  .swiper-slide a{
+    font-size: 2.2vw;
+    font-weight: 500;
+  }
   .work-together p{
     font-size: 5vw;
   }
@@ -475,9 +490,28 @@ body{
   .grid-container {
     display: grid;
     grid-template-columns: 0.3fr 1.5fr 1.2fr 1.2fr 1.5fr 0.3fr;
-    grid-template-rows: 0.1fr 1fr 1.3fr 0.1fr 0.5fr 1.6fr 0.7fr 0.6fr 0.3fr;
+    grid-template-rows: 0.3fr 1.1fr 1.2fr 0.2fr 0.5fr 1.1fr 0.6fr 0.4fr 0.1fr;
     gap: 0px 0px;
+    grid-template-areas:
+      "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
+      ". hero-text hero-text hero-text hero-text ."
+      ". dev-photo dev-photo dev-photo . ."
+      ". glad-u-here glad-u-here . . ."
+      ". . view-projects-ph view-projects-ph . ."
+      "project-intro-text project project project project project"
+      ". work-together work-together work-together work-together ."
+      ". . free-to-contact free-to-contact . ."
+      "footer footer footer footer footer footer";
   }
+  .project-intro-text{
+    display: block;
+  }
+  .project-intro-text h3{
+    font-size: 3vh;
+    font-weight: 300;
+    margin: 0;
+  }
+
   .hero-text{
     justify-content: center;
   }
@@ -488,12 +522,17 @@ body{
     font-size: 3.3vw;
   }
   a{
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     font-weight: 300;
   }
   .hero-text h3{
     font-size: 4vw;
     font-weight: 100;
+  }
+  #img-wrapper img{
+    width: 115%;
+    height: auto;
+    margin: 0;
   }
   .glad-u-here p{
     font-size: 4.5vw;
@@ -502,8 +541,25 @@ body{
   .view-projects-ph p{
     font-size: 4.5vw;
   }
+  .swiper-slide{
+    margin-right: 0vw!important;
+  }
+  .slider-card{
+    width: 60vw;
+  }
+  .swiper-slide .text-slider{
+    font-size: 2vw;
+    margin-right: 0vw;
+  }
+  .swiper-slide a{
+    font-size: 2.2vw;
+    font-weight: 500;
+  }
+  .work-together{
+    justify-content: center;
+  }
   .work-together p{
-    font-size: 5vw;
+    font-size: 8vw;
   }
   .footer h6,
   .footer p{
@@ -516,9 +572,9 @@ body{
     padding-bottom: 5%;
   }
   .free-to-contact p{
-    font-size: 2vh;
+    font-size: 2.6vh;
   }
   .reveal{
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
 }
