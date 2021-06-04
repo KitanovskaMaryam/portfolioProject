@@ -168,7 +168,7 @@ body{
         .free-to-contact p{
           font-family: var(--font-heading);
           font-size: 2vw;
-          font-weight: 200;
+          font-weight: 300;
           color: var(--color-paragraph);
         }
         .footer { grid-area: footer; 
@@ -181,7 +181,7 @@ body{
         .footer h6{
           font-family:var(--font-heading);
           color: var(--color-heading);
-          font-size:2vw;
+          font-size:3vw;
           margin: 4% 3%;
           line-height: 110%; 
         }
@@ -344,22 +344,42 @@ body{
 }
 
 @media only screen and (max-width:961px){
+
   .grid-container {
-    grid-template-rows: 0.1fr 1.1fr 2fr 0.4fr 1.8fr 1.2fr 0.6fr 0.5fr;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
+    grid-template-rows: 0.1fr 1fr 1fr 0.2fr 0.5fr 1fr 0.5fr 0.6fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
+      ". hero-text hero-text hero-text hero-text ."
+      ". . dev-photo dev-photo . ."
+      ".  glad-u-here glad-u-here . . ."
+      ". . view-projects-ph view-projects-ph . ."
+      "project project project project project project"
+      ". . work-together work-together . ."
+      ". . free-to-contact free-to-contact . ."
+      "footer footer footer footer footer footer";
+  }
+  .project-intro-text{
+    display: none;
   }
   a{
     font-size: 2vw;
     font-weight: 600;
   }
+  .hero-text{
+    justify-content: center;
+  }
   .hero-text h1{
     font-size: 5.5vw;
   }
-  .hero-text p,.view-projects-ph{
+  .hero-text p,.view-projects-ph p{
     font-size: 2vw;
-    font-weight: 100;
+    font-weight: 300;
   }
   .hero-text h3{
-    font-size: 3.5vw;
+    font-size: 3vw;
     font-weight: 300;
   }
   .swiper-slide{
@@ -376,12 +396,20 @@ body{
     font-size: 1.5vw;
     font-weight: 500;
   }
+  .footer{
+    display: flex;
+    align-items: center;
+    padding-bottom: 3%;
+  }
+  .footer #contact p{
+    margin-top: 0;
+  }
 }
 @media only screen and (max-width:662px){
   .grid-container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
-    grid-template-rows: 0.1fr 1fr 1.3fr 0.1fr 0.5fr 1.2fr 0.9fr 0.6fr 0.3fr;
+    grid-template-rows: 0.1fr 1fr 1.3fr 0.1fr 0.5fr 1.2fr 0.7fr 0.6fr 0.3fr;
     gap: 0px 0px;
     grid-template-areas:
       "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -422,5 +450,75 @@ body{
   }
   .view-projects-ph p{
     font-size: 3vw;
+  }
+  .work-together p{
+    font-size: 5vw;
+  }
+  .footer h6,
+  .footer p{
+    font-size: 4vw;
+    margin: 0;
+  }
+  .footer{
+    display: flex;
+    align-items: center;
+    padding-bottom: 2%;
+  }
+  .free-to-contact p{
+    font-size: 3.3vh;
+  }
+  .reveal{
+    transform: translateY(50px);
+  }
+}
+@media only screen and (max-width:512px){
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.3fr 1.5fr 1.2fr 1.2fr 1.5fr 0.3fr;
+    grid-template-rows: 0.1fr 1fr 1.3fr 0.1fr 0.5fr 1.6fr 0.7fr 0.6fr 0.3fr;
+    gap: 0px 0px;
+  }
+  .hero-text{
+    justify-content: center;
+  }
+  .hero-text h1{
+    font-size: 7.9vw;
+  }
+  .hero-text p{
+    font-size: 3.3vw;
+  }
+  a{
+    font-size: 2.5vw;
+    font-weight: 300;
+  }
+  .hero-text h3{
+    font-size: 4vw;
+    font-weight: 100;
+  }
+  .glad-u-here p{
+    font-size: 4.5vw;
+    font-weight: 700;
+  }
+  .view-projects-ph p{
+    font-size: 4.5vw;
+  }
+  .work-together p{
+    font-size: 5vw;
+  }
+  .footer h6,
+  .footer p{
+    font-size: 4.5vw;
+    margin: 0;
+  }
+  .footer{
+    display: flex;
+    align-items: center;
+    padding-bottom: 5%;
+  }
+  .free-to-contact p{
+    font-size: 2vh;
+  }
+  .reveal{
+    transform: translateY(40px);
   }
 }
