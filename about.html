@@ -11,7 +11,6 @@
           <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
-          <div id="background-gradient"></div>
           <div class="grid-container">
 
                     <div class="nav-bar">
@@ -30,7 +29,7 @@
 
                     <div class="skills revealXleft">
                               <h2>Skills</h2>
-                              <p>HTML / CSS / JAVASCRIPT / ADOBE PHOTOSHOP / <br>ADOBE ILLUSTRATOR / UX / UI / ADOBE XD /</p>
+                              <p>HTML / CSS / JAVASCRIPT / <br>ADOBE PHOTOSHOP / ADOBE ILLUSTRATOR /<br> UX / UI / ADOBE XD /</p>
                     </div>
 
                     <div class="more-about-me revealXright">
@@ -51,7 +50,7 @@
                               <p>feel free to contact</p>
                     </div>
                     <div class="footer">
-                              <h6>Thanks for </br>stopping by!</h6>
+                              <h6>Get in touch</h6>
                               <div id="contact">
                               <p id="mail"> <a href="mailto:kitanovskamaryam@gmail.com">kitanovskamaryam@gmail</a> </p>
                               <p id="insta"> <a href="https://www.instagram.com/kitanovska.9/" target="_blank">LinkedIn</a> </p>
@@ -61,5 +60,17 @@
           </div>
           <!-- Reveal on scroll every div -->
           <script type="text/javascript" src="reveal-on-scroll.js"></script>
+          <script>
+            var docWidth = document.documentElement.offsetWidth;
+          
+          [].forEach.call(
+            document.querySelectorAll('*'),
+            function(el) {
+              if (el.offsetWidth > docWidth) {
+                console.log(el);
+              }
+            }
+          );
+          </script>
 </body>
 </html>
