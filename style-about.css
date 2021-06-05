@@ -8,24 +8,20 @@
 html{
   scroll-behavior: smooth;
 }
+* {
+  outline: solid 1px red;
+}
 body{
           margin: 0;
           padding: 0;
-}
-#background-gradient{
-  background-image: url(images/06.-Wisteria_1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -20;
+          text-rendering: geometricPrecision;
+          -webkit-font-smoothing: antialiased;
+          overflow-x: hidden;
 }
 .grid-container {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-          grid-template-rows: 0.4fr 1fr 0.8fr 1fr 0.8fr 0.8fr 0.1fr;
+          grid-template-rows: 180px 1fr 0.8fr 1fr 0.8fr 0.8fr 200px;
           gap: 0px 0px;
           grid-template-areas:
             "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -35,30 +31,32 @@ body{
             ". . work-together work-together . ."
             ". . free-to-contact free-to-contact . ."
             "footer footer footer footer footer footer";
+            background-image: url(images/06.-Wisteria_1.jpg);
+            background-position: 50% 50%;
+            background-size: cover;
+            background-attachment: fixed;
 }
         .nav-bar { grid-area: nav-bar; }
         ul{
-          display: flex;
-          justify-content: flex-end;
-          margin: 2vh 18vw;
-          list-style-type: none;
-          padding-top: 8vh;
+                  display: flex;
+                  justify-content: flex-end;
+                  margin: 7% 18%;
+                  list-style-type: none;
         }
-          a{
-            text-decoration: none;
-            padding: 0 2vw;
-            font-family: var(--font-heading);
-            font-size: 1.3vw;
-            font-weight: 700;
-            color: var(--color-paragraph);
-            text-rendering: geometricPrecision;
-            -webkit-font-smoothing: antialiased;
+        a{
+                  text-decoration: none;
+                  padding: 0 2vw;
+                  font-family: var(--font-heading);
+                  font-size: 1.3vw;
+                  font-weight: 700;
+                  color: var(--color-paragraph);
+                  text-rendering: geometricPrecision;
+                  -webkit-font-smoothing: antialiased;
         }
         .about-me p a {
           color: var(--color-heading);
         }
-        .about-me { grid-area: about-me; 
-          height: 70vh;     
+        .about-me { grid-area: about-me;      
           display: flex;
           flex-direction: column;
           justify-content: center;}
@@ -107,10 +105,7 @@ body{
           .work-together .star{
             width: 6vw;
             height: auto; 
-  }
-  
-  
-          
+  }          
           .work-together .star img{
             width: 100%;
             height: auto;
@@ -134,9 +129,9 @@ body{
   
           .free-to-contact { grid-area: free-to-contact; align-self: center; text-align: center;}
           .free-to-contact p{
-            font-family: var(--font-heading);
+            font-family: var(--font-paragraph);
             font-size: 2vw;
-            font-weight: 200;
+            font-weight: 300;
             color: var(--color-paragraph);
           }
           .footer { grid-area: footer; 
@@ -149,8 +144,8 @@ body{
           .footer h6{
             font-family:var(--font-heading);
             color: var(--color-heading);
-            font-size:2vw;
-            margin: 4vh 2vw;
+            font-size:3vw;
+            margin: 4% 3%;
             line-height: 110%; 
           }
           .footer #contact{
@@ -217,4 +212,127 @@ body{
 }
 .nav-bar{
   animation: 1.8s ease-out 0s 1 slideNavTop;
+}
+@media only screen and (max-width:961px){
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
+    grid-template-rows: 180px 1.2fr 1fr 1.2fr 0.8fr 0.8fr 180px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
+      ". . about-me about-me about-me ."
+      ". skills skills skills skills ."
+      ". . more-about-me more-about-me more-about-me ."
+      ". . work-together work-together . ."
+      ". . free-to-contact free-to-contact . ."
+      "footer footer footer footer footer footer";
+      background-image: url(images/06.-Wisteria_1.jpg);
+      background-position: 50% 50%;
+      background-size: cover;
+      background-attachment: fixed;
+}
+a{
+  font-size: 2vw;
+  font-weight: 600;
+}
+.about-me h1,
+.skills h2,
+.more-about-me h2{
+  font-size: 6vw;
+}
+.about-me p,
+.more-about-me p{
+  font-size: 2.2vw;
+  width: 100%;
+}
+.skills p{
+  font-size: 3vw;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  padding-bottom: 3%;
+}
+.footer #contact p{
+  margin-top: 0;
+}
+#mail,
+#insta,
+#faceb{
+  margin-bottom: 0;
+}
+}
+@media only screen and (max-width:662px){
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
+    grid-template-rows: 117px 1.2fr 1fr 1.2fr 0.6fr 0.6fr 123px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
+      ". . about-me about-me about-me ."
+      ". skills skills skills skills ."
+      ". . more-about-me more-about-me more-about-me ."
+      ". . work-together work-together . ."
+      ". . free-to-contact free-to-contact . ."
+      "footer footer footer footer footer footer";
+      background-image: url(images/06.-Wisteria_1.jpg);
+      background-position: 50% 50%;
+      background-size: cover;
+      background-attachment: fixed;
+}
+a{
+  font-size: 2.5vw;
+  font-weight: 500;
+}
+.about-me p,
+.more-about-me p{
+  font-size: 2.8vw;
+}
+.work-together p{
+  font-size: 5vw;
+}
+.footer h6,
+.footer p{
+  font-size: 4vw;
+  margin: 0;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  padding-bottom: 2%;
+}
+.free-to-contact p{
+  font-size: 2.3vh;
+}
+.reveal{
+  transform: translateY(10px);
+}
+}
+@media only screen and (max-width:512px){
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
+    grid-template-rows: 119px 1.2fr 1fr 1.2fr 0.6fr 0.6fr 80px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
+      ". about-me about-me about-me about-me ."
+      ". skills skills skills skills ."
+      ". more-about-me more-about-me more-about-me more-about-me ."
+      ". work-together work-together work-together work-together ."
+      ". . free-to-contact free-to-contact . ."
+      "footer footer footer footer footer footer";
+      background-image: url(images/06.-Wisteria_1.jpg);
+      background-position: 50% 50%;
+      background-size: cover;
+      background-attachment: fixed;
+}
+.work-together{
+  justify-content: center;
+}
+.work-together p{
+  font-size: 8vw;
+}
 }
