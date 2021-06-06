@@ -203,23 +203,11 @@ body{
           height: 100%;
         }
         .swiper-slide {
-          text-align: center;
-          font-size: 18px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          -webkit-justify-content: center;
-          justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          -webkit-align-items: center;
-          align-items: center;
-          flex-direction: column;
-          justify-content: space-between;
-
+          font-size: 1.5vw;
+        }
+        .swiper-slide-active{
+          transform:scale(1.05);
+          transition: 0.4s;
         }
         .slider-card{
         /* glass effect */
@@ -227,7 +215,7 @@ body{
         position: relative;
         background: inherit;
         overflow: hidden;
-        width: 38vw;
+        /* width: 38vw; */
         z-index: 1;
         /* /glass effect */
         margin: 5% 0;
@@ -383,12 +371,6 @@ body{
     font-size: 3vw;
     font-weight: 300;
   }
-  .swiper-slide{
-    margin-right: 8vw!important;
-  }
-  .slider-card{
-    width: 37vw;
-  }
   .swiper-slide .text-slider{
     font-size: 1.8vw;
     margin-right: 3vw;
@@ -410,7 +392,7 @@ body{
   .grid-container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
-    grid-template-rows: 117px 1fr 1.3fr 0.1fr 0.5fr 1fr 0.7fr 0.6fr 123px;
+    grid-template-rows: 117px 0.5fr 0.5fr 0.1fr 0.5fr 1fr 0.3fr 0.3fr 123px;
     gap: 0px 0px;
     grid-template-areas:
       "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -452,18 +434,16 @@ body{
   .view-projects-ph p{
     font-size: 3vw;
   }
-  .swiper-slide{
-    margin-right: 0vw!important;
-  }
-  .slider-card{
-    width: 40vw;
+  .swiper-slide-active{
+    transform:scale(0.9);
+    transition: 0.4s;
   }
   .swiper-slide .text-slider{
-    font-size: 2vw;
+    font-size: 3vw;
     margin-right: 0vw;
   }
   .swiper-slide a{
-    font-size: 2.2vw;
+    font-size: 3.2vw;
     font-weight: 500;
   }
   .work-together p{
@@ -490,7 +470,7 @@ body{
   .grid-container {
     display: grid;
     grid-template-columns: 0.3fr 1.5fr 1.2fr 1.2fr 1.5fr 0.3fr;
-    grid-template-rows: 119px 1.1fr 1.2fr 0.2fr 0.5fr 1.1fr 0.6fr 0.4fr 80px;
+    grid-template-rows: 119px 0.8fr 0.8fr 0.2fr 0.5fr 1.1fr 0.6fr 0.4fr 80px;
     gap: 0px 0px;
     grid-template-areas:
       "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -541,18 +521,12 @@ body{
   .view-projects-ph p{
     font-size: 4.5vw;
   }
-  .swiper-slide{
-    margin-right: 0vw!important;
-  }
-  .slider-card{
-    width: 60vw;
-  }
   .swiper-slide .text-slider{
-    font-size: 2vw;
+    font-size: 3.5vw;
     margin-right: 0vw;
   }
   .swiper-slide a{
-    font-size: 2.2vw;
+    font-size: 3.8vw;
     font-weight: 500;
   }
   .work-together{
