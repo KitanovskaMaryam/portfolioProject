@@ -1,23 +1,39 @@
 var swiper = new Swiper('.swiper-container', {
-          slidesPerView: 1,
-          centeredSlides: true,
-          spaceBetween: 60,
-          grabCursor: true,
-          speed: 200,
-
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          // od tuka e problemot, mi go aplicira nad 662 px a ne pod
-
-          breakpoints:{
-            662: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-              slidesPerGroup: 3,
-              loop: true,
-              loopFillGroupWithBlank: true,
-          }},
-
-        });
+  slidesPerView: 1,
+  spaceBetween: 10,
+  init: true,
+  centeredSlides: true,
+  loopFillGroupWithBlank: true,
+  slidesPerGroup: 1,
+  grabCursor: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    512: {
+      slidesPerView: 1,
+      spaceBetween: 60,
+      centeredSlides: true,
+      loopFillGroupWithBlank: true,
+      slidesPerGroup: 1,
+      grabCursor: true,
+    },
+    662: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      centeredSlides: true,
+      loopFillGroupWithBlank: true,
+      slidesPerGroup: 1,
+      grabCursor: true,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+      centeredSlides: true,
+      loopFillGroupWithBlank: true,
+      slidesPerGroup: 1,
+      grabCursor: true,
+    },
+  }
+});
