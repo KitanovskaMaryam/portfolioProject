@@ -1,11 +1,11 @@
 :root{
   --color-heading: #1b0a70;
-  --color-paragraph:#1c1930;
+  --color-paragraph:#01093f;
   --color-accent: #ccc;
   --font-heading:'Poppins', sans-serif;
   --font-paragraph:'Open Sans', sans-serif;
   --scrollbarBG: #E9F2F0;
-  --thumbBG: #A2C5F2;
+  --thumbBG: #75acfc;
 }
 html{scroll-behavior: smooth;}
 /* Scrollbar */
@@ -28,7 +28,7 @@ body{
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 180px 1.1fr 1.9fr 0.5fr 1.6fr 1.2fr 0.6fr 200px;
+  grid-template-rows: 180px 1.3fr 1.9fr 0.5fr 1.6fr 1.2fr 0.6fr 160px;
   gap: 0px 0px;
   grid-template-areas:
   "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -102,9 +102,9 @@ body{
 .dev-photo { grid-area: dev-photo;}
 #img-wrapper img{
   width: 160%;
-                  height: auto;
-                  margin-top: -10%;
-                  margin-left: -30%;}
+  height: auto;
+  margin-top: -10%;
+  margin-left: -30%;}
 .view-projects-ph { grid-area: view-projects-ph; align-self: center;}
 .view-projects-ph p{ text-align: center; font-size: 2vw; color: var(--color-paragraph); font-family: var(--font-paragraph); font-weight: 500;}
 .work-together {grid-area: work-together; align-self: center; text-align: center; display: flex; flex-direction: row; justify-content: flex-start}
@@ -154,10 +154,11 @@ body{
 .project{grid-area: project;}
 .swiper-container { width: 100%; height: 100%;}
 .swiper-img img{width: 100%; height: 100%;}
-.swiper-slide {font-size: 1.2vw; height: 90%;}
+.swiper-slide {font-size: 1.1vw; max-height: 680px;}
 .swiper-slide-active{transform:scale(1.05); transition: 0.4s;}
 .slider-card{
   width: 90%;
+  max-height: 630px;
   margin: 5%;
   /* glass effect */
   box-shadow: 0 0 1em 0 rgba(0,0,0,0.2);
@@ -186,9 +187,9 @@ body{
   text-align: left;
   font-family: var(--font-paragraph);
   color: var(--color-paragraph);
-  margin-right: 3vw;}
+  height: 65px;}
 .textbox-slider{padding: 0 5% 5% 5%;}
-.textbox-slider .date{font-family: var(--font-paragraph); font-size: 14px; color: #46415c; font-weight: 300;}
+.textbox-slider .date{font-family: var(--font-paragraph); font-size: 14px; color: var(--color-paragraph); font-weight: 300;}
 .swiper-links{
   display:flex;
   width: 100%;
@@ -199,28 +200,9 @@ body{
   margin-top: 3%;
   margin-right: 3%;
   border-radius: 5px;
-  /* glass effect */
-  /* box-shadow: 0 0 1em 0 rgba(172, 126, 126, 0.2); */
-  position: relative;
-  background: inherit;
-  overflow: hidden;
-  z-index: 1;
-  /* /glass effect */
+  border: 0.25px solid #a2b1f2;
   font-weight: 600;
   font-size: 1.2vw;}
-.swiper-links a::before{
-  content: "";
-  position: absolute;
-  background: inherit;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(169, 168, 241, 0.295);
-  filter: blur(15px);
-  margin: -20px;
-  z-index: -1;
-}
 .project-intro-text{ 
   grid-area: project-intro-text;
   display: flex;
@@ -242,9 +224,9 @@ body{
     border-radius: 2px!important;
     margin: 0px 7px!important;
     opacity: 1;
-    background: #7b56a5!important;}      
+    background: var(--thumbBG) !important;}      
   .swiper-pagination-bullet-active {
-    background: #908ab9!important;}
+    background: var(--thumbBG)!important;}
   /* Swiper pagination */
 
 /* Reveal on scroll */
@@ -277,7 +259,7 @@ body{
   .grid-container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
-    grid-template-rows: 180px 1fr 1fr 0.2fr 0.5fr 1fr 0.5fr 0.6fr 180px;
+    grid-template-rows: 180px 1fr 1fr 0.2fr 0.5fr 1fr 0.6fr 0.5fr 120px;
     gap: 0px 0px;
     grid-template-areas:
       "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -297,17 +279,20 @@ body{
   .hero-text h1{font-size: 5.5vw;}
   .hero-text p,.view-projects-ph p{font-size: 2vw; font-weight: 300;}
   .hero-text h3{font-size: 3vw; font-weight: 300;}
-  .swiper-slide .text-slider{font-size: 1.8vw; margin-right: 3vw;}
+  .view-projects-ph p{ font-size: 3vw; }
+  .swiper-slide .text-slider{font-size: 1.6vw; height: 58px;}
   .swiper-slide a{font-size: 1.8vw; font-weight: 500;}
-  .footer{display: flex; align-items: center; padding-bottom: 3%;}
-  .footer #contact p{margin-top: 0;}
+  .work-together p{ font-size: 5vw; }
+  .free-to-contact p{font-size: 3vw;}
+  .footer{display: flex; align-items: center;}
+  .footer #contact p{margin-top: 0; font-size: 3vw;}
   .swiper-pagination-bullet {width: 2.5em!important; height: 0.18em!important;}  
 }
 @media only screen and (max-width:662px){
   .grid-container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
-    grid-template-rows: 117px 0.5fr 0.5fr 0.1fr 0.5fr 1fr 0.3fr 0.3fr 123px;
+    grid-template-rows: 117px 0.7fr 0.5fr 0.1fr 0.3fr 0.8fr 0.4fr 0.3fr 123px;
     gap: 0px 0px;
     grid-template-areas:
       "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -327,18 +312,19 @@ body{
   .hero-text h1{ font-size: 7.4vw;}
   a{ font-size: 2.5vw; font-weight: 500;}
   .hero-text h3{ font-size: 3vw; font-weight: 100;}
-  .glad-u-here p{ font-size: 3.8vw; font-weight: 700;}
+  .glad-u-here p{ font-size: 4vw; font-weight: 700;}
   .view-projects-ph p{ font-size: 3vw;}
+  .slider-card{ width: 90%;}
   .swiper-slide-active{ transform:scale(0.9); transition: 0.4s;}
-  .swiper-slide .text-slider{ font-size: 3vw; margin-right: 0vw;}
+  .swiper-slide .text-slider{ font-size: 2.5vw; height: 80px;}
   .swiper-slide a{ font-size: 3.2vw; font-weight: 500;}
   .work-together p{ font-size: 5vw;}
   .footer h6,
   .footer p{ font-size: 4vw; margin: 0;}
   .footer{ display: flex; align-items: center; padding-bottom: 2%;}
-  .free-to-contact p{ font-size: 2.3vh;}
+  .free-to-contact p{ font-size: 3.2vw;}
   .reveal{ transform: translateY(50px);}
-  .swiper-pagination-bullet { width: 2em!important; height: 0.12em!important;}
+  .swiper-pagination-bullet { width: 2em!important; height: 0.3em!important;}
 }
 @media only screen and (max-width:512px){
   .grid-container {
@@ -374,8 +360,8 @@ body{
   .work-together p{ font-size: 8vw;}
   .footer h6,
   .footer p{ font-size: 4.5vw; margin: 0;}
-  .footer{ display: flex; align-items: center; padding-bottom: 5%;}
-  .free-to-contact p{ font-size: 2.6vh;}
+  .footer{ display: flex; align-items: center;}
+  .free-to-contact p{ font-size: 3.4vw; font-weight: 300;}
   .reveal{ transform: translateY(30px);}
   .swiper-pagination-bullet { width: 1.2em!important; height: 0.12em!important;}
 }
