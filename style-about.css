@@ -1,11 +1,11 @@
 :root{
   --color-heading: #1b0a70;
-  --color-paragraph:#1c1930;
+  --color-paragraph:#01093f;
   --color-accent: #ccc;
   --font-heading:'Poppins', sans-serif;
   --font-paragraph:'Open Sans', sans-serif;
   --scrollbarBG: #E9F2F0;
-  --thumbBG: #A2C5F2;}
+  --thumbBG: #75acfc;}
 html{ scroll-behavior: smooth;}
 /* Scrollbar */
 /* Scrollbar */
@@ -23,12 +23,12 @@ body{
   padding: 0;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hi
+  overflow-x: hidden;
 }
 .grid-container {
   display: grid;
   grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;;
-  grid-template-rows: 180px 1fr 0.8fr 1fr 0.8fr 0.8fr 200px;
+  grid-template-rows: 180px 1fr 0.8fr 1fr 0.8fr 0.8fr 160px;
   gap: 0px 0px;
   grid-template-areas:
     "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -60,6 +60,15 @@ a{
   -webkit-font-smoothing: antialiased;}
 .about-me p a {
   color: var(--color-heading);}
+.about-me p .CV{
+  border: 1px solid var(--color-heading);
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+.about-me p .or{
+  margin-right: 10px;
+  margin-left: 12px;
+}
 .about-me { 
   grid-area: about-me;      
   display: flex;
@@ -78,8 +87,8 @@ a{
 .more-about-me p{
   font-family: var(--font-paragraph);
   color: var(--font-paragraph);
-  font-size: 1.1vw;
-  line-height: 130%;
+  font-size: 1.3vw;
+  line-height: 140%;
   font-weight: 400;
   width: 82%;}
 .skills { 
@@ -91,6 +100,7 @@ a{
   font-family: var(--font-heading);
   color: var(--color-heading);
   font-size: 1.5vw;
+  line-height: 170%;
   font-weight: 700;}
 .more-about-me { grid-area: more-about-me;
   display: flex;
@@ -175,7 +185,7 @@ a{
   .grid-container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
-    grid-template-rows: 180px 1.2fr 1fr 1.2fr 0.8fr 0.8fr 180px;
+    grid-template-rows: 180px 1.2fr 1fr 1.2fr 0.5fr 0.5fr 120px;
     gap: 0px 0px;
     grid-template-areas:
       "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -194,17 +204,18 @@ a{
   .skills h2,
   .more-about-me h2{font-size: 6vw;}
   .about-me p,
-  .more-about-me p{font-size: 2.2vw; width: 100%;}
+  .more-about-me p{font-size: 2.5vw; width: 100%;}
   .skills p{font-size: 3vw;}
-  .footer{display: flex;align-items: center;padding-bottom: 3%;}
-  .footer #contact p{margin-top: 0;}
+  .free-to-contact p{font-size: 3vw;}
+  .footer{display: flex;align-items: center;}
+  .footer #contact p{margin-top: 0; font-size: 3vw;}
   #mail, #insta, #faceb{margin-bottom: 0;}}
 
 @media only screen and (max-width:662px){
   .grid-container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
-    grid-template-rows: 117px 1.2fr 1fr 1.2fr 0.6fr 0.6fr 123px;
+    grid-template-rows: 117px 1.5fr 1fr 1.2fr 0.7fr 0.6fr 123px;
     gap: 0px 0px;
     grid-template-areas:
       "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
@@ -222,11 +233,20 @@ a{
   a{ font-size: 2.5vw; font-weight: 500;}
   .about-me p,
   .more-about-me p{ font-size: 2.8vw;}
+  .about-me p .CV{
+    border: 1px solid var(--color-heading);
+    border-radius: 3px;
+    padding: 6px 12px;
+  }
+  .about-me p .or{
+    margin-right: 8px;
+    margin-left: 10px;
+  }
   .work-together p{ font-size: 5vw;}
   .footer h6,
   .footer p{ font-size: 4vw; margin: 0;}
   .footer{ display: flex; align-items: center; padding-bottom: 2%;}
-  .free-to-contact p{ font-size: 2.3vh;}
+  .free-to-contact p{ font-size: 3.2vw;}
   .reveal{ transform: translateY(10px);}}
 
 @media only screen and (max-width:512px){
@@ -247,5 +267,7 @@ a{
     background-position: 50% 50%;
     background-size: cover;
     background-attachment: fixed;}
+  a{ font-size: 2.8vw; font-weight: 300;}
  .work-together{justify-content: center;}
- .work-together p{font-size: 8vw;}}
+ .work-together p{font-size: 8vw;}
+ .free-to-contact p{font-size: 3.4vw; font-weight: 300;}}
