@@ -1,0 +1,66 @@
+:root{
+          --color-heading: #1b0a70;
+          --color-paragraph:#01093f;
+          --color-accent: #ccc;
+          --font-heading:'Poppins', sans-serif;
+          --font-paragraph:'Open Sans', sans-serif;
+          --scrollbarBG: #E9F2F0;
+          --thumbBG: #75acfc;
+        }
+html{scroll-behavior: smooth;  
+          background-image: url(images/06.-Wisteria_1.jpg);
+          background-position: 50% 50%;
+          background-size: cover;
+          background-attachment: fixed;}
+          body::-webkit-scrollbar {width: 16px;}
+body{scrollbar-width: thin; scrollbar-color: var(--thumbBG) var(--scrollbarBG);}
+body::-webkit-scrollbar-track {background: var(--scrollbarBG);}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 8px;
+  border: 4px solid var(--scrollbarBG);}
+::-webkit-scrollbar-thumb:hover {background: #A2C5F2;}
+body{
+margin: 0;
+padding: 0;
+text-rendering: geometricPrecision;
+-webkit-font-smoothing: antialiased;
+}
+.video-container{
+          width: 85vw;
+          height: 100%;
+          padding:54.17% 0 0 0;
+          position:relative;
+          margin: 0% auto;
+}
+iframe{
+  position:absolute;
+  top:-5vh;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.date{font-family: var(--font-paragraph); font-size: 1.2vw; color: var(--color-paragraph); font-weight: 300; margin-top: 10vh;}
+.text-slider{
+  text-align: left;
+  font-family: var(--font-paragraph);
+  color: var(--color-paragraph);
+  font-size: 1.6vw;
+margin-bottom: 3vw;}
+.back-button{
+          display: flex;
+          padding: 2% 2% 0% 2%;
+}
+a{
+        text-decoration: none;
+        padding: 1vw 2vw;
+        font-family: var(--font-heading);
+        font-size: 1.3vw;
+        font-weight: 700;
+        color: var(--color-paragraph);
+        border: 1px solid var(--color-paragraph) ;
+        border-radius: 2px;
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: antialiased;
+
+}
